@@ -1,0 +1,21 @@
+.ats_header {
+  font-size: 40pt;
+  margin: 0px auto 0px auto;
+  text-align: center;
+  color: white;
+  background-color: black;
+  height: 80px;
+  padding: 2px 0px 0px 2px;
+  text-shadow: 5px 5px 10px red;
+}
+.ats_footer {
+  font-size: 20pt;
+  text-align: center;
+  color: red;
+  background-color: white;
+  height: 40px;
+  text-shadow: 2px 2px 5px black;
+}
+.pad {
+  padding: 10px 10px 10px 10px;
+}
