@@ -1,3 +1,21 @@
-<img src="/images/sample02.jpg/" width="80" height="80"></img> </td>
+<h2 style="color: rgb(88,82,82)"><center><%= @product.category %></center></h2>
 
-<p><%= @product.category %></p>
+  <% Product.order(:id).each do %>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-6">
+<div class="jumbotron">
+<table>
+  <th><img src="/images/sample02.jpg/" width="120" height="120"></img></th>
+    <td style="text-indent:50px">
+      <h3 style="color: rgb(197,32,32)"><%= @product.name.upcase %></h3>
+      <h4 style="color=black">$<%= @product.price %></h4>
+      <h5><%= @product.description %></h5>
+    </td>
+    </table>
+</div>
+</div>
+</div>
+</div>
+<% end %>

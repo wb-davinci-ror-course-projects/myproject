@@ -17,3 +17,9 @@ get "/products/:v" do
   @product = Product.find(id)
   halt erb(:show)
 end
+
+get"/tools/:v" do
+  id = params[:v]
+  @tool = Tool.find(id)
+  halt erb(:index)
+end
