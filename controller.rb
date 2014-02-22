@@ -12,14 +12,13 @@ get "/contact" do
   halt erb(:contact)
 end
 
-get "/products/:v" do
-  id = params[:v]
-  @product = Product.find(id)
+get "/products/" do 
+  @product = Product.all
   halt erb(:show)
 end
 
-get"/tools/:v" do
-  id = params[:v]
+get "/tools/:id" do
+  id = params[:id]
   @tool = Tool.find(id)
-  halt erb(:index)
+  halt erb(:show)
 end

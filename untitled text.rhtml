@@ -1,0 +1,17 @@
+
+<% Tool.order(:id).each do |t| %>
+  <% if @tool.name == @product.category do %>
+  <h1><%= @product.name %></h1>
+      <% if t.category != @product.category do %>
+   <h1><%= @product.price %></h1>
+              <% end %>
+    <% end %>
+  <% end %>
+  <% end %>
+  <% end %>
+#-------------------------------------------------
+<% Tool.order(:id).each %>
+<% if '@tool.name' == '@product.category' do |x|%>
+  <h1><%= @product.name %></h1>
+      <% if 'tool.name' != '@product.category' do %>
+   <h1><%= @product.price %></h1>

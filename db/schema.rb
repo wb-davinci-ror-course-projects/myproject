@@ -16,6 +16,11 @@ ActiveRecord::Schema.define(version: 20140219023112) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "athletes", force: true do |t|
+    t.string  "name"
+    t.integer "class_year"
+  end
+
   create_table "products", force: true do |t|
     t.string "category"
     t.string "product_code"
@@ -23,6 +28,18 @@ ActiveRecord::Schema.define(version: 20140219023112) do
     t.string "description"
     t.float  "price"
     t.string "image"
+  end
+
+  create_table "races", force: true do |t|
+    t.string  "name"
+    t.integer "num_meters"
+  end
+
+  create_table "racing_goats", force: true do |t|
+    t.string "name"
+    t.string "gender"
+    t.string "best_100m_time"
+    t.string "dietary_preference"
   end
 
   create_table "tools", force: true do |t|
