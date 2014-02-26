@@ -4,21 +4,30 @@ get "/" do
   halt erb(:index)
 end
 
-get "/home" do
-  halt erb(:home)
-end
-
 get "/contact" do
   halt erb(:contact)
 end
 
-get "/products/" do 
-  @product = Product.all
-  halt erb(:show)
+get "/diamond" do
+  halt erb(:diamond)
 end
 
-get "/tools/:id" do
-  id = params[:id]
-  @tool = Tool.find(id)
-  halt erb(:show)
+get "/safety" do
+  halt erb(:safety)
+end
+
+get "/sand" do
+  halt erb(:sand)
+end
+
+get "/glue" do
+  halt erb(:glue)
+end
+
+get "/pad" do
+  halt erb(:pad)
+end
+
+get "/other" do
+  halt erb(:other)
 end
