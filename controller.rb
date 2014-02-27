@@ -21,6 +21,7 @@ get "/sand" do
 end
 
 get "/glue" do
+  @products = Product.find_by(category: "Glues & Sealer")
   halt erb(:glue)
 end
 

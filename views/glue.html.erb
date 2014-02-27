@@ -1,1 +1,26 @@
-glue page
+
+  <% if @products.category.downcase == "glues & sealer" %>
+    <div><p class="ats_header_b"><%= @products.category %></p></div>
+      <% break %>
+  <% end %>
+
+<% Product.order(:id).each do |p|%>
+  <% if p.category.downcase == "glues & sealer" %>
+      <div class="row">
+        <div class="col-md-5">
+          <center>
+            <table>
+              <th><img src="/images/sample02.jpg/" width="120" height="120"></img></th>
+                <td style="text-indent:50px">
+                  <b><h4 style="color: rgb(197,32,32)"><%= p.name.upcase %></h4></b>
+                  <center><b><p style="color=black">$<%= p.price %></p></b></center>
+                  <p><%= p.description %></p>
+                </td>
+            </table>
+          </center>
+        </div>
+  <% end %>
+<% end %>  
+        </div>
+
+  
