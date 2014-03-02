@@ -15,6 +15,3 @@ get "/:product_category" do
   halt erb(:show)
 end
 
-get "/other" do
-  halt erb(:other)
-end
