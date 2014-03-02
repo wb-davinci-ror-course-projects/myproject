@@ -8,25 +8,11 @@ get "/contact" do
   halt erb(:contact)
 end
 
-get "/diamond" do
-  halt erb(:diamond)
-end
-
-get "/safety" do
-  halt erb(:safety)
-end
-
-get "/sand" do
-  halt erb(:sand)
-end
-
-get "/glue" do
-  @products = Product.find_by(category: "Glues & Sealer")
-  halt erb(:glue)
-end
-
-get "/pad" do
-  halt erb(:pad)
+get "/:product_category" do
+  product_category = params[:product_category]
+  @header = "#{product_category}"
+  @products = Product.where(category: product_category)
+  halt erb(:show)
 end
 
 get "/other" do
