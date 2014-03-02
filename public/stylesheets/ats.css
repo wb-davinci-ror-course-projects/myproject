@@ -8,6 +8,20 @@
   padding: 2px 0px 5px 10px;
   text-shadow: 5px 5px 10px red;
 }
+
+.shadow {
+  font-size: 20pt;
+  text-align: center;
+  color: rgb(8, 8, 102);
+  text-shadow: 1px 1px 1px rgb(0, 133, 255);
+}
+
+.shadow_big {
+  font-size: 40pt;
+  text-align: center;
+  color: rgb(8, 8, 102);
+  text-shadow: 1px 1px 1px rgb(0, 133, 255);
+}
 .ats_header_b {
   font-size: 30pt;
   margin: -20px auto 50px auto;
