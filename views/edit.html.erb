@@ -1,1 +1,26 @@
-this is the edit file
+<center>
+<h2> Add New Product </h2>
+
+<h3>
+  <%= label_tag "category", "Category" %><br>
+  <%= text_field_tag "category", @new_product.category, size: 20 %><br></br>
+
+  <%= label_tag "product_code", "Product Code" %><br>
+  <%= text_field_tag "product_code", @new_product.product_code, size: 20 %><br></br>
+
+  <%= label_tag "name", "Name" %><br>
+  <%= text_field_tag "name", @new_product.name, size: 20 %><br></br>
+
+  <%= label_tag "description", "Description" %><br>
+  <%= text_field_tag "description", @new_product.description, size: 20 %><br></br>
+
+  <%= label_tag "price", "price" %><br>
+  <%= text_field_tag "price", @new_product.price, size: 20 %><br></br>
+
+  <%= label_tag "image", "image" %><br>
+  <%= text_field_tag "image", @new_product.image, size: 20 %><br></br>
+ 
+   <%= submit_tag "Add Product" %>
+ </h3>
+ </center>
+
