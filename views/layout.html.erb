@@ -7,20 +7,32 @@
         <p class="ats_header">Action Tool & Supply</p>   
           <form class="navbar-form navbar-left">
             <div class="form-group">
-              <a class="btn btn-default" href='/'>Home</a>
+              <a class="btn btn-danger" href='/'>Home</a>
               <a class="btn btn-primary" href='/Diamond Products'>Diamond Products</a>
               <a class="btn btn-primary" href='/Safety Equipment'>Safety Equipment</a>
               <a class="btn btn-primary" href='/Sand Paper'>Sand Paper</a>
               <a class="btn btn-primary" href='/Glues & Sealer'>Glues & Sealer</a>
               <a class="btn btn-primary" href='/Wet & Dry Pads'>Wet & Dry Pads</a>
-              <a class="btn btn-primary" href='/Other'>Other</a>
+              <a class="btn btn-primary" href='/Other Products'>Other Products</a>
+              <a class="btn btn-info" href='/about_us'>About Us</a>
               <a class="btn btn-default" href='/contact'>Contact Us</a>
             </div>   
           </form>
-      </nav>   
-      
- 
-        <%= yield %>
+      </nav>  
+     
+    <% if flash[:error] != nil %>
+      <div class="alert alert-danger">
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+    
+    <%# non-block form is needed to adapt Rails form helpers to Sinatra %>
+    <%# request.path_info means POST action should be same as the GET URL %>
+    <%= form_tag request.path_info %>
+    
+      <%= yield %>
+    </form>
+        
             
 
        
