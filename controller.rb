@@ -4,13 +4,15 @@ get "/" do
   halt erb(:index)
 end
 
+get "/about" do
+  halt erb(:about)
+end
+
 get "/contact" do
   halt erb(:contact)
 end
 
-get "/about_us" do
-  halt erb(:about_us)
-end
+
 
 get "/edit" do
   halt erb(:edit)
