@@ -35,7 +35,7 @@ price: "5.99",
 image: ""
 
 Product.create! product_code: "abc-123",
-category: "Other",
+category: "Other Products",
 name: "name of product 6",
 description: "sample product other",
 price: "4.99",
@@ -77,7 +77,7 @@ price: "5.99",
 image: ""
 
 Product.create! product_code: "abc-123",
-category: "Other",
+category: "Other Products",
 name: "name of product 12",
 description: "sample product other",
 price: "4.99",
