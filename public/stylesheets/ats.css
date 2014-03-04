@@ -50,6 +50,9 @@
 .pad_left {
   padding: 10px 10px 10px 50px;
 }
+.pad_col {
+  padding: 10px 10px 10px 10px;
+}
 .pad {
   padding: 10px 10px 10px 30px;
 }
