@@ -5,7 +5,7 @@ class Products < ActiveRecord::Migration
     t.string :product_code
     t.string :name
     t.string :description
-    t.float :price
+    t.string :price
     t.string :image
     end
   end
