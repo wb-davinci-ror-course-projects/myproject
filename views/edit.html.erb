@@ -1,4 +1,5 @@
- 
+<%= error_messages_for @new_product %>
+
 <div class="pad">
   <h2> Add New Product </h2>
 <div class="row">
@@ -13,14 +14,14 @@
       <%= text_field_tag "product_code", "", size: 20 %><br></br>
 
       <%= label_tag "name", "Name" %><br>
-      <%= text_field_tag "name", "", size: 20 %><br></br>
-      
-       <%= label_tag "quantity", "Quantity" %><br>
-      <%= text_field_tag "quantity", "", size: 20 %><br></br>
+      <%= text_field_tag "name", "", size: 20 %><br></br>     
     </h3>
   </div>
   <div class="col-md-3">
     <h3>
+      <%= label_tag "quantity", "Quantity" %><br>
+      <%= text_field_tag "quantity", "", size: 20 %><br></br>
+      
       <%= label_tag "description", "Description" %><br>
       <%= text_area_tag "description", "", size: 20 %><br></br>
 

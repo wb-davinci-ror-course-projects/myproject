@@ -15,6 +15,7 @@ end
 
 
 get "/edit" do
+  @new_product = Product.first
   halt erb(:edit)
 end
 
@@ -27,8 +28,11 @@ post "/edit" do
   @new_product.description    = params["description"]
   @new_product.price          = params["price"]
   @new_product.image          = params["product_code"]
-  @new_product.save!
+  if @new_product.save == true
   redirect "/"
+  else
+    halt erb(:edit)
+  end
 end
 
 get "/:product_category" do
