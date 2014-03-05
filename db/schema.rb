@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140217032200) do
     t.string "category"
     t.string "product_code"
     t.string "name"
+    t.float  "quantity"
     t.string "description"
     t.string "price"
     t.string "image"

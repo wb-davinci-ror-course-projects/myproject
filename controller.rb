@@ -23,6 +23,7 @@ post "/edit" do
   @new_product.category       = params["category"]
   @new_product.product_code   = params["product_code"]
   @new_product.name           = params["name"]
+  @new_product.quantity       = params["quantity"]
   @new_product.description    = params["description"]
   @new_product.price          = params["price"]
   @new_product.image          = params["product_code"]
