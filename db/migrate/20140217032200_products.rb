@@ -8,6 +8,7 @@ class Products < ActiveRecord::Migration
     t.string :description
     t.string :price
     t.string :image
+    t.float  :category_id
     end
   end
 end

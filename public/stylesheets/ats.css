@@ -16,6 +16,20 @@
   text-shadow: 1px 1px 1px rgb(0, 133, 255);
 }
 
+.thumbnail_img:hover {
+    background-color: transparent;
+    z-index: 100;
+}
+
+a:hover
+{ 
+width: 240;
+height: 240;
+}
+
+.zoom {
+  zoom: 150%;
+}
 .shadow_big {
   font-size: 40pt;
   text-align: center;
@@ -34,11 +48,11 @@
 }
 
 .ats_footer {
-  font-size: 20pt;
+  font-size: 15pt;
   text-align: center;
-  color: red;
+  color: white;
   background-color: gray;
-  height: 40px;
+  height: 30px;
   text-shadow: 2px 2px 5px black;
 }
 .container_mine {

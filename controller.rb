@@ -12,14 +12,34 @@ get "/contact" do
   halt erb(:contact)
 end
 
-
-
-get "/edit" do
-  @new_product = Product.first
-  halt erb(:edit)
+get "/sales_flyer_edit/" do
+  halt erb(:sales_flyer_edit)
 end
 
-post "/edit" do
+post "/sales_flyer_edit/" do
+  if params[:category_name] != nil 
+  category_name = params[:category_name]
+  @category_on_sale = CategorySale.where(category_name: category_name).first
+  @category_on_sale.category_name = params[:category_name]
+  @category_on_sale.percent_off   = params[:percent_off]
+    if @category_on_sale.save == true
+      redirect "/"
+        else
+          halt erb(:sales_flyer_edit)
+    end
+  end
+end
+
+get "/edit_old" do
+  halt erb(:edit_old)
+end
+
+get "/add_new" do
+  @new_product = Product.first
+  halt erb(:add_new)
+end
+
+post "/add_new" do
   @new_product                = Product.new
   @new_product.category       = params["category"]
   @new_product.product_code   = params["product_code"]
@@ -28,10 +48,13 @@ post "/edit" do
   @new_product.description    = params["description"]
   @new_product.price          = params["price"]
   @new_product.image          = params["product_code"]
+  category_id = Category.find_by(name: @new_product.category)
+  @new_product.category_id    = category_id.id
+  
   if @new_product.save == true
   redirect "/"
   else
-    halt erb(:edit)
+    halt erb(:add_new)
   end
 end
 
@@ -41,4 +64,6 @@ get "/:product_category" do
   @products = Product.where(category: product_category)
   halt erb(:show)
 end
+
+
 
