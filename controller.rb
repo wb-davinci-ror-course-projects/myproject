@@ -17,19 +17,19 @@ get "/sales_flyer_edit/" do
 end
 
 post "/sales_flyer_edit/" do
-  if params[:category_name] != nil 
+  if params[:category_name] != ""
   category_name = params[:category_name]
   @category_on_sale = CategorySale.where(category_name: category_name).first
   @category_on_sale.category_name = params[:category_name]
   @category_on_sale.percent_off   = params[:percent_off]
     if @category_on_sale.save == true
-      redirect "/"
-        else
-          halt erb(:sales_flyer_edit)
+      redirect "/" 
     end
+  else 
+    @error = "Please be sure to enter a category and percentage."
+          halt erb(:sales_flyer_edit)
   end
 end
-
 get "/edit_old" do
   halt erb(:edit_old)
 end
