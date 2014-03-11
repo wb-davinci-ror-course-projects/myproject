@@ -1,11 +1,13 @@
+<% if @error != nil %>
+  <h2 style="color: blue"><%= @error %></h2>
+<% end %>
 
-
-<%= error_messages_for @new_product %>
+<!--< error_messages_for @new_product --!>
 
 <div class="pad">
   <h2> Add New Product </h2>
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-4">
    
     <h3>
       <%= label_tag "category", "Product Category" %><br>

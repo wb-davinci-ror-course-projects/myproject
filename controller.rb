@@ -27,7 +27,7 @@ post "/sales_flyer_edit/" do
     end
   else 
     @error = "Please be sure to enter a category and percentage."
-          halt erb(:sales_flyer_edit)
+      halt erb(:sales_flyer_edit)
   end
 end
 get "/edit_old" do
@@ -40,6 +40,7 @@ get "/add_new" do
 end
 
 post "/add_new" do
+  if params[:category] != ""
   @new_product                = Product.new
   @new_product.category       = params["category"]
   @new_product.product_code   = params["product_code"]
@@ -51,13 +52,14 @@ post "/add_new" do
   category_id = Category.find_by(name: @new_product.category)
   @new_product.category_id    = category_id.id
   
-  if @new_product.save == true
-  redirect "/"
+    if @new_product.save == true
+      redirect "/"
+    end
   else
+    @error = "Please fill out all the fields"
     halt erb(:add_new)
   end
 end
-
 get "/:product_category" do
   product_category = params[:product_category]
   @header = "#{product_category}"
