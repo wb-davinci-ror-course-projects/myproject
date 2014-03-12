@@ -12,6 +12,11 @@ get "/contact" do
   halt erb(:contact)
 end
 
+get "/more_info/:id" do
+  @header = "Product Detail Page"
+  halt erb(:more_info)
+end
+
 get "/sales_flyer_edit/" do
   halt erb(:sales_flyer_edit)
 end

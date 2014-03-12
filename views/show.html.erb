@@ -2,11 +2,20 @@
   <%= @header %>
 </div>
 
+<div class="container_left_panel">
+<div style="background-color: red;">
+      <th><a style="color: white" href="/">Sales Flyer</a></th><br>
+      <th><a style="color: white" href="/">Articles</a></th><br>
+    </div>
+</div>
+</div>
+
 <div class="pad_col">
 <div class="row">
   <% @products.each do |p| %>
   <div class="col-md-5">
-    <table>  
+    <table> 
+    
       <th>
         <a class="a:hover" href='/images/<%= p.image %>.jpg/'>
           <img src="/images/<%= p.image %>.jpg/" width="150" height="150"></img>
@@ -28,12 +37,11 @@
                     <% else %>
                   <% end %>
                         <h4><p><center><%= p.description %></p></h4></center>
-          </td>
+          <a href="/more_info/:<%= p.id %>">More details and applications...</a></td>
               <% end %>        
     </table>             
   </div> 
   <% end %>
   </div>
 </div>
-
 
