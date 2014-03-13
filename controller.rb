@@ -13,15 +13,9 @@ get "/contact" do
 end
 
 get "/more_info/:id" do
+  id = params[:id]
   @header = "Product Detail Page"
-  @product = 1
-  #@product_code = session[:product_code]
-  halt erb(:more_info)
-end
-
-post "/more_info/:id" do
-  product = params[:id]
-  session[:id] = @product
+  @product = Product.find_by(id: id)
   halt erb(:more_info)
 end
 
