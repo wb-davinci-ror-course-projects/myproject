@@ -35,8 +35,11 @@ name: "name of product 1",
 quantity: 1,
 description: "sample product diamond",
 price: "9.99",
-image: "abc-123",
-category_id: 1
+image: "abc-125",
+category_id: 1,
+more_info: "There will be product information here like specs, application and advice.
+            There will be product information here like specs, application and advice.
+            There will be product information here like specs, application and advice."
 
 Product.create! product_code: "abc-122",
 category: "Safety Equipment",
@@ -45,8 +48,10 @@ quantity: 1,
 description: "sample product safety",
 price: "8.99",
 image: "abc-123",
-category_id: 2
-
+category_id: 2,
+more_info: "This section will handle product details, applications and
+            advice on use."
+            
 Product.create! product_code: "abc-123",
 category: "Sand Paper",
 name: "name of product 3",
@@ -54,7 +59,10 @@ quantity: 1,
 description: "sample product sand",
 price: "7.99",
 image: "abc-123",
-category_id: 3
+category_id: 3,
+more_info: "This section will handle product details, applications and
+            advice on use."
+
 
 Product.create! product_code: "abc-124",
 category: "Glues & Sealer",
@@ -63,7 +71,9 @@ quantity: 1,
 description: "sample product glue",
 price: "6.99",
 image: "abc-123",
-category_id: 4
+category_id: 4,
+more_info: "This section will handle product details, applications and
+            advice on use."
 
 Product.create! product_code: "abc-125",
 category: "Wet & Dry Pads",
@@ -72,7 +82,9 @@ quantity: 1,
 description: "sample product pads",
 price: "5.99",
 image: "abc-123",
-category_id: 5
+category_id: 5,
+more_info: "This section will handle product details, applications and
+            advice on use."
 
 Product.create! product_code: "abc-126",
 category: "Other Products",
@@ -81,7 +93,9 @@ quantity: 1,
 description: "sample product other",
 price: "4.99",
 image: "abc-123",
-category_id: 6
+category_id: 6,
+more_info: "This section will handle product details, applications and
+            advice on use."
 
 Product.create! product_code: "abc-127",
 category: "Diamond Products",
@@ -90,7 +104,9 @@ quantity: 1,
 description: "sample product diamond",
 price: "9.99",
 image: "abc-123",
-category_id: 1
+category_id: 1,
+more_info: "This section will handle product details, applications and
+            advice on use."
 
 Product.create! product_code: "abc-128",
 category: "Safety Equipment",
@@ -99,7 +115,9 @@ quantity: 1,
 description: "sample product safety",
 price: "8.99",
 image: "abc-123",
-category_id: 2
+category_id: 2,
+more_info: "This section will handle product details, applications and
+            advice on use."
 
 Product.create! product_code: "abc-129",
 category: "Sand Paper",
@@ -108,7 +126,9 @@ quantity: 1,
 description: "sample product sand",
 price: "7.99",
 image: "abc-123",
-category_id: 3
+category_id: 3,
+more_info: "This section will handle product details, applications and
+            advice on use."
 
 Product.create! product_code: "abc-130",
 category: "Glues & Sealer",
@@ -117,7 +137,10 @@ quantity: 1,
 description: "sample product glue",
 price: "6.99",
 image: "abc-123",
-category_id: 4
+category_id: 4,
+more_info: "There will be product information here like specs, application and advice.
+            There will be product information here like specs, application and advice.
+            There will be product information here like specs, application and advice."
 
 Product.create! product_code: "abc-131",
 category: "Wet & Dry Pads",
@@ -126,7 +149,9 @@ quantity: 1,
 description: "sample product pads",
 price: "5.99",
 image: "abc-123",
-category_id: 5
+category_id: 5,
+more_info: "This section will handle product details, applications and
+            advice on use."
 
 Product.create! product_code: "abc-132",
 category: "Other Products",
@@ -135,4 +160,6 @@ quantity: 1,
 description: "sample product other",
 price: "4.99",
 image: "abc-123",
-category_id: 6
+category_id: 6,
+more_info: "This section will handle product details, applications and
+            advice on use."

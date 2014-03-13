@@ -14,6 +14,14 @@ end
 
 get "/more_info/:id" do
   @header = "Product Detail Page"
+  @product = 1
+  #@product_code = session[:product_code]
+  halt erb(:more_info)
+end
+
+post "/more_info/:id" do
+  product = params[:id]
+  session[:id] = @product
   halt erb(:more_info)
 end
 
@@ -54,9 +62,9 @@ post "/add_new" do
   @new_product.description    = params["description"]
   @new_product.price          = params["price"]
   @new_product.image          = params["product_code"]
+  @new_product.more_info      = params["more_info"]
   category_id = Category.find_by(name: @new_product.category)
   @new_product.category_id    = category_id.id
-  
     if @new_product.save == true
       redirect "/"
     end

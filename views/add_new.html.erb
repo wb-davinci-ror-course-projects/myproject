@@ -19,7 +19,9 @@
       <%= text_field_tag "product_code", "", size: 20 %><br></br>
 
       <%= label_tag "name", "Name" %><br>
-      <%= text_field_tag "name", "", size: 20 %><br></br>     
+      <%= text_field_tag "name", "", size: 20 %><br></br> 
+         <%= label_tag "more_info", "More Infomation, Details and Applications" %><br>
+      <%= text_area_tag "more_info", "", size: 20 %><br></br>   
     </h3>
   </div>
   <div class="col-md-3">
@@ -28,7 +30,9 @@
       <%= text_field_tag "quantity", "", size: 20 %><br></br>
       
       <%= label_tag "description", "Description" %><br>
-      <%= text_area_tag "description", "", size: 20 %><br></br>
+      <%= text_area_tag "description", "", size: 100 %><br></br>
+      
+    
 
       <%= label_tag "price", "Price" %><br><h6><i>enter price with 2 decimal places</i></h6>
       <%= text_field_tag "price", "", size: 20 %><br></br>

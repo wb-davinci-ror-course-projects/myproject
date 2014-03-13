@@ -71,11 +71,11 @@ height: 240;
   margin-left: auto;
 }
 .container_left_panel {
+  padding-right: 950px;
+  padding-left: 0px;
   text-align: center;
   font-size: 15pt;
   color: white;
-  padding-right: 950px;
-  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
 }
