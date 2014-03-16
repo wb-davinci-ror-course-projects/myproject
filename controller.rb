@@ -4,6 +4,42 @@ get "/" do
   halt erb(:index)
 end
 
+get "/login" do
+  halt erb(:login)
+end
+
+get "/new_user" do
+  @user = User.new
+  halt erb(:new_user)
+end
+
+post "/new_user" do
+  @user = User.new
+  @user.username = params[:username]
+  if @user.username == ""
+    flash[:error] = "Username can not be blank. Please try again."
+    halt erb(:new_user)
+  end
+  @user.password = params[:password]
+  @user.password_confirmation = params[:password_confirmation]
+  if @user.password_confirmation != @user.password
+    flash[:error] = "There was a problem with the passwords, they must be entered and match.
+                      Please try again."
+    halt erb(:new_user)
+  end
+  @user.email_address = params[:email_address]
+  if @user.email_address == ""
+    flash[:error] = "The e-mail address can not be blank. Please try again."
+    halt erb(:new_user)
+  end
+  if @user.save == false
+    flash[:error] = "Your username and/or e-mail already exists, please try again."
+    halt erb(:new_user)
+  else
+  redirect "/"
+  end
+end
+
 get "/about" do
   halt erb(:about)
 end

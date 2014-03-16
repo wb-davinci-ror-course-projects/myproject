@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140308172452) do
+ActiveRecord::Schema.define(version: 20140316022553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 20140308172452) do
     t.string "image"
     t.float  "category_id"
     t.string "more_info"
+  end
+
+  create_table "users", force: true do |t|
+    t.string "username"
+    t.string "email_address"
+    t.string "password_digest"
+    t.string "shipping_address1"
+    t.string "shipping_address2"
+    t.string "shipping_city"
+    t.string "shipping_state"
+    t.string "shipping_zip"
+    t.string "phone_number"
   end
 
 end
